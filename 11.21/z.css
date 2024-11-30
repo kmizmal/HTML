@@ -1,0 +1,71 @@
+.main {
+    width: 70%;
+    margin-top: 5px;
+    float: left;
+}
+body {
+    cursor: url('./Arrow.ico'), auto;
+}
+.mean {
+    box-sizing: border-box;
+    width: 80%;
+    height: 2rem;
+    margin: 2px auto 5px;
+}
+
+.icon {
+    height: 1.7rem;
+    float: left;
+    border: rgba(51, 85, 236, 0.6) solid 1px;
+    margin-right: -0.7rem;
+    padding: 0.4rem 1.8rem 0px 1rem;
+    border-radius: 10px 40px 0px 0px;
+    box-shadow: 3px 1.5px 10px #7a8da8;
+    background-image: url(./img/slidebg.jpg);
+    background-position-y: 0px;
+}
+
+.icon:hover {
+    background-position-y: 40px;
+}
+
+a {
+    text-decoration: none;
+    padding-left: 1rem;
+    color: white;
+}
+
+h1 {
+    color: red;
+}
+
+h3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    /* 限制2行 */
+    line-height: 1.2rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+hr {
+    border-top: dashed 2px;
+    color: #8792a26e;
+}
+
+time {
+    float: right;
+    /* text-align: right; */
+
+    color: gray;
+}
+
+li {
+    list-style-type: none;
+    background-image: url(./img/time.png);
+    background-repeat: no-repeat;
+    background-position: 5px 17px;
+    padding-left: 1.5rem;
+    line-height: 3rem;
+}

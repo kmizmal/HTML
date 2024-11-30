@@ -1,0 +1,55 @@
+#main {
+    background-image: url(./img/course_bg.png);
+    width: 50%;
+    position: relative;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+a {
+    text-decoration: none;
+    padding-left: 1rem;
+    color: black;
+}
+
+ul {
+    padding-left: 0.5rem;
+}
+
+li {
+    list-style-type: none;
+    border: solid 1px gray;
+    background-color: rgb(239, 239, 239);
+    background-image: url(./img/icon.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    margin-top: 1rem;
+    height: 2rem;
+    padding-top: 0.6rem;
+}
+
+.white {
+    color: white;
+}
+
+.mean {
+    height: 2rem;
+    margin: 2px auto;
+    width: 70%;
+}
+
+.icon {
+    height: 1.7rem;
+    float: left;
+    border: rgba(51, 85, 236, 0.6) solid 1px;
+    margin-right: -0.7rem;
+    padding: 0.4rem 1.8rem 0px 1rem;
+    border-radius: 10px 40px 0px 0px;
+    box-shadow: 3px 1.5px 10px #7a8da8;
+    background-image: url(./img/slidebg.jpg);
+    background-position-y: 0px;
+}
+
+.icon:hover {
+    background-position-y: 40px;
+}
