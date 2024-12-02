@@ -1,0 +1,49 @@
+div div[class^=mean] {
+    width: 400px;
+    float: left;
+    margin: 1rem;
+}
+
+#gqy {
+    width: 400px;
+}
+
+.sole {
+    color: rgb(240, 188, 131);
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.gray {
+    color: gray;
+}
+
+div[class^=mean] div {
+    position: relative;
+}
+
+div[class^=mean] div div.num {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+div[class^=mean] div div.num div[class^=_num] {
+    float: right;
+    background-color: white;
+    border: red solid .125rem;
+    margin-left: .7rem;
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+}
+
+div[class^=mean] div div.num div[class^=_num]:hover {
+    background-color: gold;
+}
+
+#qg {
+    float: right;
+    border-radius: 6px;
+}
