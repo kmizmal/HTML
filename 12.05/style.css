@@ -1,0 +1,114 @@
+.center {
+    margin: 1px auto;
+    width: 70%;
+    background-color: aliceblue;
+}
+
+h2 {
+    text-align: center;
+}
+
+.top img {
+    margin: .5rem;
+}
+
+.top a[class^=mean] {
+    color: aliceblue;
+    height: 4.4rem;
+    line-height: 4.4rem;
+    display: block;
+    float: right;
+    margin-right: 2.5rem;
+}
+
+.top {
+    background-color: black;
+    color: aliceblue;
+}
+
+.main {
+    position: relative;
+}
+
+.main .div {
+    position: absolute;
+}
+
+.main .left {
+    top: 50%;
+    background-color: red;
+    left: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+}
+
+.main .right {
+    top: 50%;
+    background-color: red;
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+    right: 1rem;
+}
+
+.main .right:hover {
+    background-color: aliceblue;
+}
+
+.main .left:hover {
+    background-color: aliceblue;
+}
+
+.main img {
+    max-width: 100%;
+    /* position: relative;
+    top: 50%;
+    transform: translateY(-50%); */
+}
+
+.main .icon {
+    position: relative;
+    bottom: 2rem;
+    width: 8rem;
+    height: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main .icon div[class^=icon] {
+    background-color: aliceblue;
+    float: left;
+    height: 1rem;
+    width: 1rem;
+    margin-left: .5rem;
+    border-radius: 100%;
+}
+
+.main .icon div[class^=icon]:hover {
+    background-color: red;
+}
+
+a {
+    text-decoration: none;
+}
+
+.img img {
+    max-width: 30%;
+    max-height: 12rem;
+    box-shadow: .3rem .2rem 5px gray, -.3rem -.2rem 5px gray;
+    margin-left: 1.5rem;
+    /* box-shadow: -.3rem -.2rem 5px gray; */
+}
+
+.text p {
+    text-indent: 2rem;
+}
+
+.underabout {
+    text-align: center;
+    background-color: #625e5e;
+    height: 2rem;
+    line-height: 2rem;
+    color: white;
+}
