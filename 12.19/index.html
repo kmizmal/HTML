@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 img {
+            max-width: 100%;
+        }
+
+        .main {
+            background-image: url(./images/content_bg.jpg);
+            margin: 5px auto;
+            width: 60%;
+            color: #f5b8b8;
+        }
+
+
+        form {
+            margin-left: 4rem;
+            display: block;
+        }
+
+
+
+        form h3 input:not([type^="radio"]):not([type^="checkbox"]) {
+            width: 45%;
+            height: 1.5rem;
+            border: #f5b8b8 solid 1px;
+            border-radius: 5px;
+        }
+
+        form h3 {
+            margin-left: 3.5rem;
+        }
+
+        form h3 select {
+            width: 20%;
+        }
+
+        h4 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1><img src="./images/banner2.png" alt=""></h1>
+        <br>
+
+
+
+        <form action="" id="mess" name="mai">
+            <h2>注册步骤：&nbsp;&nbsp;&nbsp;&nbsp;<img src="./images/step.jpg" alt=""></h2>
+            <br>
+            <h2>您的账号信息：</h2>
+            <hr>
+            <h3>注册方式
+                <label>
+                    <input type="radio" name="zc">E-mali </label>
+                <label>
+                    <input type="radio" name="zc">手机号码注册
+                </label>
+            </h3>
+            <label>
+                <h3>注册邮箱:
+                    <input type="text" name="" id="">
+                </h3>
+            </label>
+            <label>
+                <h3>注册手机:
+                    <input type="text" name="" id="">
+                </h3>
+            </label>
+            <label>
+                <h3>登录密码:
+                    <input type="text" name="" id="">
+                </h3>
+            </label>
+            <label>
+                <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;昵称:
+                    <input type="text" name="" id="">
+                </h3>
+            </label>
+
+
+            <h2>你的个人信息：</h2>
+            <hr>
+
+            <h3>性别：
+                <label>
+                    <input type="radio" name="sex">男 </label>
+                <label>
+                    <input type="radio" name="sex">女
+            </h3></label>
+            <label>
+                </h3>
+                <h3>出生日期：<input type="date"></h3>
+            </label>
+            <h3>
+
+                <label for="input1" class="form-label">常用app：</label>
+                <input list="datalist1" placeholder="" />
+                <datalist id="datalist1">
+                    <option value="bilibili"></option>
+                    <option value="Genshin"></option>
+                    <option value="aaa"></option>
+                    <option value="bbb"></option>
+                    <option value="ccc"></option>
+                </datalist>
+            </h3>
+            <h3>
+                <label for="options">所在城市：</label>
+                <select id="options" name="options">
+                    <option value="option1">北京</option>
+                    <option value="option2">上海</option>
+                    <option value="option3">广州</option>
+                </select>
+            </h3>
+
+            <h3>兴趣爱好：
+                <input type="checkbox" name="hobite" id="">足球
+                <input type="checkbox" name="hobite" id="">篮球
+                <input type="checkbox" name="hobite" id="">游泳
+                <input type="checkbox" name="hobite" id="">唱歌
+                <input type="checkbox" name="hobite" id="">跑步
+                <input type="checkbox" name="hobite" id="">瑜伽
+            </h3>
+            <label>
+                <h3>幸运颜色：
+                    <input type="color" value="#f5b8b8">
+                </h3>
+            </label>
+            <label>
+                <h3>幸运数字：
+                    <input type="text" value="0">
+                </h3>
+            </label>
+            <label>
+                <h3>自我介绍:
+                    <textarea name="intro" placeholder="评论的时候，请遵纪守法并注意语言文明，多给文档分享人一些支持。"
+                        style="resize: none;height: 8rem;width: 60%;"></textarea>
+
+                </h3>
+            </label>
+            <h4> <input type="submit"
+                    style="background-image: url(./images/btn.jpg);height: 46px;width: 166px;border: none;" value="">
+            </h4>
+        </form>
+    </div>
+</body>
+
+</html>
