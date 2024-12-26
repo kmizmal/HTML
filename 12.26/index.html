@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wb {
+            position: relative;
+            margin: 5rem auto;
+            border: 1px gray solid;
+            width: 500px;
+            height: 600px;
+
+        }
+
+        .wb img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 100%;
+        }
+
+
+        .wb img:first-child {
+            opacity: 1;
+            transition: opacity 1s;
+        }
+
+        .wb:hover img:first-child {
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .wb img:last-child {
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .wb:hover img:last-child {
+            opacity: 1;
+            transition: opacity 1s;
+        }
+
+        .docter {
+            position: relative;
+            margin: 5rem auto;
+            width: 750px;
+            height: 500px;
+            overflow: hidden;
+            border: 1px gray solid;
+        }
+
+        .docter h2 {
+            position: absolute;
+            bottom: -3rem;
+            left: 50%;
+            transform: translate(-50%);
+            transition: bottom .5s;
+        }
+
+        .docter:hover h2 {
+            bottom: 0;
+            transition: bottom 1s;
+            background-color: aqua;
+        }
+
+        .docter img {
+            transition: transform .5s;
+        }
+
+        .docter:hover img {
+            transform: scale(180%);
+            transition: transform 1s;
+        }
+
+        .fly {
+            position: relative;
+            margin: 5rem auto;
+            border: 1px gray solid;
+            width: 910px;
+            height: 350px;
+        }
+
+        .fly h3 {
+            position: absolute;
+            top: 10%;
+            left: 20%;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: aliceblue;
+            /* box-shadow: 1px 1px 1px; */
+        }
+
+        .fly h1 {
+            position: absolute;
+            top: 30%;
+            left: 18%;
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: yellow;
+        }
+
+        #plan {
+            position: absolute;
+            bottom: 1%;
+            left: 1%;
+        }
+
+        .fly:hover h1 {
+            top: 35%;
+            font-size: 4rem;
+            transition: all 3s;
+        }
+
+        .fly:hover h1 span {
+            font-size: 6rem;
+            color: red;
+            text-shadow: 5px 5px 4px rgba(88, 70, 70, 0.5);
+            transition: all 2s;
+
+        }
+
+        .fly:hover #plan {
+            bottom: 70%;
+            left: 80%;
+            transition: all 4s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wb"><img src="./img/pic-1.jpg" alt=""><img src="./img/pic-2.jpg" alt=""></div><hr>
+    <div class="docter"><img src="./img/dq1.png" alt="">
+        <h2>最美逆行者</h2>
+    </div><hr>
+    <div class="fly"><img src="./img/bg.jpg" alt="">
+        <h3>"十一"旅游小长假</h3>
+        <h1>特价机票<span>2</span>折起</h1><img id="plan" src="./img/plane.png" alt="">
+    </div>
+</body>
+
+</html>
