@@ -1,0 +1,133 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.first {
+    height: .5rem;
+    background-color: black;
+}
+
+.mean {
+    /* margin: 0 auto;
+    width: 80%; */
+    height: 5rem;
+    background-image: url(./img/bg.jpg);
+}
+
+.mean>img {
+    margin-left: 15rem;
+}
+
+.mean * {
+    float: left;
+    line-height: 4rem;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.mean div[class^=top] {
+    margin-left: 3rem;
+    font-size: larger;
+    font-weight: bolder;
+    width: 6rem;
+    position: relative;
+}
+
+.mean div[class^=top] div[class*=hoverflow] {
+    /* height: 10rem; */
+    height: 0;
+    float: inline-start;
+    overflow: hidden;
+    box-shadow: 2px 3px 5px rgb(108, 96, 96), 3px -3px 4px black;
+    background-color: #efefef;
+    opacity: .8;
+    position: absolute;
+    z-index: 300;
+    left: -2.5rem;
+    top: 3rem;
+    transition: height .3s;
+}
+
+.mean div[class^=top]:hover div[class*=hoverflow] {
+    height: 10.5rem;
+    transition: height .5s;
+}
+
+.mean div[class^=top] div[class*=hoverflow] p {
+    width: 8rem;
+    font-size: small;
+    border-top: rgba(100, 96, 96, .6) 1px solid;
+    padding-left: 1rem;
+}
+
+.mean div[class^=top] div[class*=hoverflow] p:first-child {
+    border-top: rgba(100, 96, 96, .8) 5px solid;
+}
+
+.mean div[class^=top] div[class*=hoverflow] a {
+    line-height: 2rem;
+    padding-left: .5rem;
+}
+
+@keyframes banner {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.img {
+    width: 100%;
+    height: 580px;
+    position: relative;
+    overflow: hidden;
+}
+
+.img img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    overflow: hidden;
+    /* max-width: 100%; */
+    max-height: 100%;
+}
+
+.img img:nth-child(1) {
+    animation: banner 5s infinite linear;
+    animation-delay: 1s;
+}
+
+.img img:nth-child(2) {
+    animation: banner 5s infinite linear;
+    animation-delay: 2s;
+}
+
+.img img:nth-child(3) {
+    animation: banner 5s infinite linear;
+    animation-delay: 3s;
+}
+
+.img img:nth-child(4) {
+    animation: banner 5s infinite linear;
+    animation-delay: 4s;
+}
+
+.img img:nth-child(5) {
+    animation: banner 5s infinite linear;
+    animation-delay: 5s;
+}
