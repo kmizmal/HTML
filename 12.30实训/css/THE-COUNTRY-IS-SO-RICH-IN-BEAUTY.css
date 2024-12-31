@@ -1,52 +1,102 @@
+/* 主容器样式 */
+
 .THE-COUNTRY-IS-SO-RICH-IN-BEAUTY {
-    height: 40rem;
+    height: 100%;
+    /* 使用百分比高度以自适应内容 */
 }
+
+
+/* 副标题样式 */
 
 div>h2 {
     color: gray;
     margin-top: 0;
-    font-size: normal;
+    font-size: 1.2rem;
+    /* 修正 'normal' 为具体字体大小 */
 }
 
+
+/* h3标题样式 */
+
 .THE-COUNTRY-IS-SO-RICH-IN-BEAUTY h3 {
-    margin-top: 0;
     width: 60%;
     margin: 0 auto;
-    transition: box-shadow .3s;
-    padding: .5rem 0;
+    transition: box-shadow 0.3s ease-in-out;
+    padding: 0.5rem 0;
     background-color: aliceblue;
     border-radius: 5px;
     position: relative;
-    bottom: 1rem;
+    bottom: 2rem;
 }
 
+
+/* 子元素（卡片样式） */
+
 .THE-COUNTRY-IS-SO-RICH-IN-BEAUTY .img div {
-    width: 20rem;
     float: left;
+    /* 子元素左浮动 */
     background-color: rgb(239, 239, 239);
-    box-shadow: .2rem .2rem 10px;
-    transition: transform .3s
+    /* 背景色 */
+    box-shadow: 0.2rem 0.2rem 10px rgba(0, 0, 0, 0.1);
+    /* 阴影效果 */
+    transition: transform 0.3s ease-in-out;
+    /* 平滑的过渡效果 */
+    width: calc(33.33% - 2rem);
+    /* 减去外边距的宽度 */
+    margin: 1rem;
+    /* 外边距 */
+    box-sizing: border-box;
+    /* 包括 padding 和 border */
+    text-align: center;
+    /* 内容居中对齐 */
 }
+
+
+/* 鼠标悬停时的 h3 标题效果 */
 
 .THE-COUNTRY-IS-SO-RICH-IN-BEAUTY .img div:hover h3 {
     box-shadow: 0 0 10px rgba(75, 68, 68, 0.8), 0 0 5px rgba(75, 68, 68, 0.5);
-    transition: box-shadow .5s;
+    transition: box-shadow 0.5s ease-in-out;
 }
+
+
+/* 鼠标悬停时的卡片效果 */
 
 .THE-COUNTRY-IS-SO-RICH-IN-BEAUTY .img div:hover {
     transform: scale(1.1);
-    transition: transform .5s
+    /* 放大效果 */
+    transition: transform 0.5s ease-in-out;
 }
+
+
+/* 描述文本样式 */
 
 .THE-COUNTRY-IS-SO-RICH-IN-BEAUTY .img div p {
     padding: 0 1rem;
     color: rgb(128, 137, 134);
 }
 
-.THE-COUNTRY-IS-SO-RICH-IN-BEAUTY .img div:not(:first-child) {
-    margin-left: 8rem;
-}
+
+/* 图片样式 */
 
 .THE-COUNTRY-IS-SO-RICH-IN-BEAUTY .img div img {
     max-width: 100%;
+    /* 图片宽度自适应容器 */
+    border-radius: 5px;
+    /* 为图片添加圆角 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* 图片阴影 */
+    margin-bottom: 1rem;
+    /* 图片与文字之间的间距 */
+}
+
+@media (max-width: 768px) {
+    .THE-COUNTRY-IS-SO-RICH-IN-BEAUTY .img div {
+        float: none;
+        /* 取消浮动 */
+        width: 100%;
+        /* 宽度占满屏幕 */
+        margin: 1rem 0;
+        /* 上下间距 */
+    }
 }

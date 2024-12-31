@@ -1,0 +1,49 @@
+/* 公共css */
+iframe {
+    width: 100%;
+    overflow: hidden;
+    border: none;
+    height: 44rem;
+    box-sizing: border-box;
+}
+
+img:hover {
+    cursor: url('../Arrow.ico'), auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+.clear:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/* 页脚样式 */
+
+footer {
+    background-color: black;
+    color: gray;
+    text-align: center;
+    height: 5rem;
+    line-height: 5rem;
+}
+
+footer a {
+    color: gray;
+}

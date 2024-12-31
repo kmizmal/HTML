@@ -1,0 +1,104 @@
+#hitokoto_text {
+    color: #66afef;
+}
+
+h2 {
+    text-align: left;
+}
+
+h3 span {
+    font-weight: 100;
+    color: gray;
+}
+
+.xian {
+    margin: 0 30% 0 25%;
+    width: 45%;
+    position: relative;
+}
+
+h4 {
+    text-align: center;
+    color: gray;
+    font-weight: 300;
+}
+
+.fast {
+    background-color: rgb(239, 239, 239);
+    padding: 1.5rem;
+}
+
+p {
+    text-indent: 2rem;
+}
+
+p:has(img),
+.hitokoto {
+    text-align: center;
+    text-indent: 0rem;
+}
+
+p img {
+    max-width: 70%;
+}
+
+.left {
+    width: 45%;
+    position: absolute;
+    left: -50%;
+    top: 0rem;
+}
+
+.right {
+    width: 50%;
+    position: absolute;
+    overflow-y: auto;
+    right: -55%;
+    top: 0%;
+    background-color: rgb(237, 240, 243);
+}
+
+.right img {
+    max-width: 85%;
+}
+
+hr {
+    border-top: dashed 1px rgb(201, 201, 201);
+}
+
+td {
+    padding: .5rem;
+    border: #dad4d4 1px solid;
+    width: 5rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    font-size: smaller;
+}
+
+table {
+    border-spacing: .5rem;
+    /* position: relative;
+    right: -50%; */
+    margin: 0 auto;
+}
+
+.right .doubleImg {
+    height: 7rem;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.right .doubleImg img {
+    float: left;
+    width: 46%;
+    margin: 2%;
+}
+
+.right ul {
+    list-style-type: circle;
+}
+
+.right li {
+    margin: .6rem;
+}

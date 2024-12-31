@@ -5,142 +5,150 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="./jquery-3.7.1.js"></script>
+    <link rel="icon" href="./img/zmal.png" type="image/x-icon">
     <title>实训</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/travel.css">
     <link rel="stylesheet" href="./css/THE-COUNTRY-IS-SO-RICH-IN-BEAUTY.css">
-    <style>
-        iframe {
-            width: 100%;
-            height: 44rem;
-            overflow: hidden;
-        }
-        
-        .main {
-            width: 80%;
-            margin: 0 auto;
-        }
-        
-        h1,
-        h2,
-        h3 {
-            text-align: center;
-        }
-        
-        .clear:after {
-            content: '';
-            display: block;
-            clear: both;
-        }
-        
-        .mount {
-            width: 1300px;
-        }
-        
-        .mount div div p {
-            position: absolute;
-            padding: 0px;
-            /* margin: .5rem .5rem; */
-            bottom: -13px;
-            line-height: 40px;
-            text-align: center;
-            height: 40px;
-            color: aliceblue;
-            background-color: rgba(0, 0, 0, .7);
-        }
-        
-        .mount .big p {
-            width: 100%;
-        }
-        
-        .mount .float p {
-            width: 300px;
-            font-size: small;
-        }
-        
-        .mount div img {
-            max-height: 100%;
-        }
-        
-        .mount .big {
-            float: left;
-            height: 410px;
-            position: relative;
-            transition: transform .3s;
-        }
-        
-        .mount .big:hover {
-            transform: scale(1.1);
-            transition: transform .5s;
-        }
-        
-        .mount .float {
-            float: left;
-            /* right: -5%; */
-            height: 200px;
-            width: 305px;
-            margin-left: 10px;
-            position: relative;
-        }
-        
-        .mount .float:nth-child(4) {
-            margin-top: 10px;
-        }
-        
-        .mount .float:nth-child(5) {
-            margin-top: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/mount.css">
+
 </head>
 
 <body>
-    <iframe src="./alltop.html" frameborder="0"></iframe>
+
+    <script src="./zmal.js"></script>
+    <!-- 背景粒子，滚动导航指示条，鼠标点击文字特效 -->
+    <!-- 公共版头 ，我也不知道怎么就脑子一抽写了个这个-->
+    <iframe src="./alltop.html" title="All Top" id="top"></iframe>
     <div class="main">
+        <!-- 主体 -->
         <div class="THE-COUNTRY-IS-SO-RICH-IN-BEAUTY clear">
-            <h1>江山如此多娇<br><img src="./img/quar.jpg" alt=""></h1>
+            <!-- 主标题 -->
+            <h1>
+                江山如此多娇
+                <br>
+                <img src="./img/quar.jpg" alt="装饰图标">
+            </h1>
+
+            <!-- 副标题 -->
             <h2>THE COUNTRY IS SO RICH IN BEAUTY</h2>
+
+            <!-- 图片和描述内容 -->
             <div class="img">
-                <div class="left"><img src="./img/pic-5.jpg" alt="">
+                <!-- 元阳梯田 -->
+                <div class="left">
+                    <img src="./img/pic-5.jpg" alt="元阳梯田">
                     <h3>元阳梯田</h3>
-                    <p>"你一眼，就是哈尼的1300年。"元阳梯田是1300年哈尼族留下的一幅名画。由于这里的山势和地形只能开辟梯田种植，于是当地居民因地制宜，把缓坡开辟成大面积的农田，把...</p>
+                    <p>
+                        "你一眼，就是哈尼的1300年。"元阳梯田是1300年哈尼族留下的一幅名画。 由于这里的山势和地形只能开辟梯田种植，于是当地居民因地制宜，把缓坡开辟成大面积的农田，把...
+                    </p>
                 </div>
-                <div class="center"><img src="./img/pic-11.jpg" alt="">
+
+                <!-- 七彩丹霞 -->
+                <div class="center">
+                    <img src="./img/pic-11.jpg" alt="七彩丹霞">
                     <h3>七彩丹霞</h3>
-                    <p>丹霞更像一部彩绘的地质教科书，章章有序，节节新颖。绘图分布匀称，图画明朗细腻。布局在阴面石壁上的细纹、暗花，仿佛记载着曾在祁连山下血腥风雨的争战，繁华落寞的往昔...</p>
+                    <p>
+                        丹霞更像一部彩绘的地质教科书，章章有序，节节新颖。绘图分布匀称，图画明朗细腻。 布局在阴面石壁上的细纹、暗花，仿佛记载着曾在祁连山下血腥风雨的争战，繁华落寞的往昔...
+                    </p>
                 </div>
-                <div class="right"><img src="./img/pic-12.jpg" alt="">
+
+                <!-- 青海湖 -->
+                <div class="right">
+                    <img src="./img/pic-12.jpg" alt="青海湖">
                     <h3>青海湖</h3>
-                    <p>人间仙境—青海湖，是天堂掉下来的一滴甘露 ，是银河溅出来的一颗珍珠 当我仰望着塔尔寺的神圣 仿佛你又像洁白的哈达 在我肩头飘拂 ...
+                    <p>
+                        人间仙境—青海湖，是天堂掉下来的一滴甘露，是银河溅出来的一颗珍珠。 当我仰望着塔尔寺的神圣，仿佛你又像洁白的哈达，在我肩头飘拂...
                     </p>
                 </div>
             </div>
         </div>
+
         <div class="mount">
-            <h1>壮美山河<br><img src="./img/quar.jpg" alt=""></h1>
+            <!-- 主标题 -->
+            <h1>壮美山河<br><img src="./img/quar.jpg" alt="装饰图标"></h1>
             <h2>MAGNIFICENT RIVERS AND MOUNTAINS</h2>
+
             <div class="clear">
+                <!-- 左图浮动部分 -->
                 <div class="big">
-                    <img src="./img/pic-14.jpg">
+                    <img src="./img/pic-14.jpg" alt="万里长城">
                     <p>万里长城 -- 蕴含着我们古代人民的劳动智慧和辛勤的付出</p>
                 </div>
+                <!-- 多图浮动部分 -->
                 <div class="float">
-                    <img src="./img/pic-15.jpg">
-                    <p id="bdlg">布达拉宫 -- 令无数人感到神秘，又无比向往的地方</p>
+                    <img src="./img/pic-15.jpg" alt="布达拉宫">
+                    <span>布达拉宫</span>
+                    <p>布达拉宫 -- 令无数人感到神秘，又无比向往的地方</p>
                 </div>
                 <div class="float">
-                    <img src="./img/pic-16.jpg">
-                    <p id="taishang">泰山之巅 -- 云海绵绵，烂锦飞千丈，金波涌万棱</p>
+                    <img src="./img/pic-16.jpg" alt="泰山之巅">
+                    <span>泰山之巅</span>
+                    <p>泰山之巅 -- 云海绵绵，烂锦飞千丈，金波涌万棱</p>
                 </div>
                 <div class="float">
-                    <img src="./img/pic-20.jpg">
-                    <p id="hhkpb">黄河壶口瀑布 -- 黄河之水天上来，奔流到海不复回</p>
+                    <img src="./img/pic-20.jpg" alt="黄河壶口瀑布">
+                    <span>黄河壶口瀑布</span>
+                    <p>黄河壶口瀑布 -- 黄河之水天上来，奔流到海不复回</p>
                 </div>
                 <div class="float">
-                    <img src="./img/pic-18.jpg">
-                    <p id="ylxs">玉龙雪山 -- 玉龙昂首天咫尺，远视滇池照影白</p>
+                    <img src="./img/pic-18.jpg" alt="玉龙雪山">
+                    <span>玉龙雪山</span>
+                    <p>玉龙雪山 -- 玉龙昂首天咫尺，远视滇池照影白</p>
                 </div>
             </div>
         </div>
 
+        <div class="travel">
+
+            <h1>江南美如画<br><img src="./img/quar.jpg" alt=""></h1>
+            <h2>JIANGNAN IS PICTURESQUE</h2>
+            <div class="box clear">
+                <div class="box_top clear">
+                    <div class="left clear"><img src="./img/img-1.jpg" alt="旅游攻略-第一步">
+                        <div class="mass"><br><br>
+                            <h3>01. 旅游攻略-第一步</h3>
+                            <hr>
+                            <p>
+                                规划旅游的线路问题，根据此次旅游的目的进行旅游线路的确定。对于多目的地来说，一般要考虑距离的远近及交通，还有花销，为下步的规划做准备。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="right clear"><img src="./img/img-3.jpg" alt="03. 旅游攻略-第三步">
+                        <div class="mass"><br><br>
+                            <h3>02. 旅游攻略-第二步</h3>
+                            <hr>
+                            <p>线路确定好之后，就是交通的考虑，多个目的地就得考虑交通的便利性，有利于节省开支，目的地的先后顺利就得有明确的规划了，以避免不必要的麻烦，影响旅游的心情就得不偿失了。</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box_bottom clear">
+                    <div class="left"><img src="./img/img-2.jpg" alt="02. 旅游攻略-第二步">
+                        <div class="mass"><br><br>
+                            <h3>03. 旅游攻略-第三步</h3>
+                            <hr>
+                            <p>目的地确定好后，就可从目的地考虑当地是否有熟人。如果有就可以让其帮忙建议哪些地方适合游览，哪些地方值得去，另一个就是自己得做功课了，确定好此行的地点，不至于到了目的地乱了阵脚。</p>
+                        </div>
+                    </div>
+                    <div class="right clear"><img src="./img/img-4.jpg" alt="04. 旅游攻略-第四步">
+                        <div class="mass"><br><br>
+                            <h3>04. 旅游攻略-第四步</h3>
+                            <hr>
+                            <p>确定费用，统计此行关于门票，交通，住宿等各方面大概的费用，做到心中有数。关于旅行的安排，选择好的旅行社，会省掉很多事情，那么旅行社选择大品牌的是非常好的。</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
+    <footer>
+        <p>Copyright © 2022 Beautiful China All Rights Reserved. 醉美中国 版权所有-- <a href="https://github.com/kmizmal">刘腾飞240002090124</a></p>
+    </footer>
 </body>
 
 </html>

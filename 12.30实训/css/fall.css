@@ -1,0 +1,57 @@
+
+
+.left {
+    /* width: 20%; */
+    position: absolute;
+    left: -25%;
+    top: 0rem;
+}
+
+.left p img {
+    height: 1rem;
+    width: 1rem;
+}
+
+.fall {
+    margin: 0 20% 0 30%;
+    width: 50%;
+    column-count: 4;
+    /* column-gap: 1px; */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.fall .item {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    /* padding: 2px; */
+    position: relative;
+    box-shadow: 5px 5px 5px gray;
+    /* border-radius: 3px; */
+    break-inside: avoid;
+}
+
+.fall .item p {
+    margin-top: 0;
+}
+
+.fall .item img {
+    width: 100%;
+    height: auto;
+}
+
+.fall img::after {
+    position: absolute;
+    display: block;
+    top: 2px;
+    left: 2px;
+}
+
+p {
+    text-align: center;
+}
+.left p span {
+    font-weight: 100;
+    color: gray;
+}

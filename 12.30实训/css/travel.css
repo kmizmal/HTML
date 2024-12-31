@@ -1,0 +1,41 @@
+.travel .box div img {
+    max-height: 100%; /* 确保图像不超过最大高度 */
+}
+.travel .box {
+    width: 100%;
+}
+.travel .box div[class^=box] {
+    height: 20rem; /* 设置类名以 'box' 开头的 div 的高度 */
+}
+
+.travel .box div[class^=box]>div {
+    width: 48%; /* 设置类 'left' 和 'right' 元素的宽度 */
+    /* height: 18rem;  */
+    height: 90%;
+    /* 设置类 'left' 和 'right' 元素的高度 */
+    border: red solid 1px;
+}
+
+.travel .box div[class^=box] .left {
+    float: left; /* 将元素浮动到左侧 */
+}
+
+.travel .box div[class^=box] .right {
+    float: right; /* 将元素浮动到右侧 */
+}
+
+.travel .box div[class^=box] div .mass {
+    width: 40%; /* 设置类 'mass' 元素的宽度 */
+    padding: 0 1rem; /* 添加左右内边距 */
+    height: 18rem; /* 设置类 'mass' 元素的高度 */
+    float: right; /* 将元素浮动到右侧 */
+    background-color: #ebe8e5; /* 设置背景颜色 */
+}
+
+.travel .box div[class^=box] div .mass hr {
+    border-top: 1px dashed #c9c9c9; /* 设置水平线的顶部边框样式 */
+}
+
+.travel .box div[class^=box] div .mass h3 {
+    text-align: left; /* 将 h3 元素的文本左对齐 */
+}
