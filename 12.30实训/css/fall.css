@@ -1,47 +1,48 @@
-
-
 .left {
-    /* width: 20%; */
+    /* 左侧容器，绝对定位，初始位置在左侧屏幕外 */
     position: absolute;
     left: -25%;
     top: 0rem;
 }
 
 .left p img {
+    /* 左侧容器内图片的大小 */
     height: 1rem;
     width: 1rem;
 }
 
 .fall {
+    /* 主容器，设置边距和宽度，使用多列布局 */
     margin: 0 20% 0 30%;
     width: 50%;
     column-count: 4;
-    /* column-gap: 1px; */
     box-sizing: border-box;
     position: relative;
 }
 
 .fall .item {
+    /* 主容器内每个项目的样式 */
     width: 100%;
     display: block;
     box-sizing: border-box;
-    /* padding: 2px; */
     position: relative;
-    box-shadow: 5px 5px 5px gray;
-    /* border-radius: 3px; */
-    break-inside: avoid;
+    box-shadow: 5px 5px 5px gray; /* 阴影效果 */
+    break-inside: avoid; /* 防止列内断开 */
 }
 
 .fall .item p {
+    /* 项目内段落的样式 */
     margin-top: 0;
 }
 
 .fall .item img {
+    /* 项目内图片的样式 */
     width: 100%;
     height: auto;
 }
 
 .fall img::after {
+    /* 图片后的伪元素，绝对定位 */
     position: absolute;
     display: block;
     top: 2px;
@@ -49,9 +50,12 @@
 }
 
 p {
+    /* 段落文本居中 */
     text-align: center;
 }
+
 .left p span {
+    /* 左侧容器内文本的样式 */
     font-weight: 100;
     color: gray;
 }

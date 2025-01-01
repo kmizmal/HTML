@@ -1,11 +1,10 @@
 .travel .box div img {
     max-height: 100%; /* 确保图像不超过最大高度 */
+    max-width: 50%;
 }
-.travel .box {
-    width: 100%;
-}
+
 .travel .box div[class^=box] {
-    height: 20rem; /* 设置类名以 'box' 开头的 div 的高度 */
+    height: 20rem; 
 }
 
 .travel .box div[class^=box]>div {

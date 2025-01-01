@@ -1,190 +1,99 @@
-/* 去除链接下划线并设置其颜色为黑色 */
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-
-/* 第一个部分的样式 */
-
-.first {
-    height: .5rem;
-    background-color: black;
-}
-
-
-/* 主部分的样式，带有背景图片 */
-
-.mean {
-    height: 5rem;
+/* ===== 导航菜单样式 ===== */
+.main-menu {
     background-image: url(../img/bg.jpg);
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    color: black;
+    width: 100%;
+    padding: 0 20%;
 }
 
-
-/* 主部分内图片的样式 */
-
-.mean>img {
-    margin-left: 15rem;
+.main-menu .logo img {
+    max-height: 100%;
 }
 
-
-/* 主部分内所有元素的样式 */
-
-.mean * {
-    float: left;
-    line-height: 4rem;
-    margin-bottom: 0;
-    margin-top: 0;
+.menu-list {
+    /* 去除列表默认样式 */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex: 1;
 }
 
-
-/* 主部分内类名以'top'开头的div样式 */
-
-.mean div[class^=top] {
+.menu-item {
+    position: relative;
     margin-left: 3rem;
     font-size: larger;
     font-weight: bolder;
-    width: 6rem;
-    position: relative;
+    text-align: center;
+}
+
+.menu-item a,
+.menu-item span {
+    display: inline-block;
+    padding: 1rem 0;
+    line-height: 3rem;
+    color: black;
+    cursor: pointer;
 }
 
 
-/* 主部分内类名包含'hoverflow'的div样式 */
-
-.mean div[class^=top] div[class*=hoverflow] {
-    /* 初始高度设置为0 */
-    /* height: 10rem; */
-    height: 0;
-    float: left;
-    overflow: hidden;
-    box-shadow: 2px 3px 5px rgb(108, 96, 96), 3px -3px 4px black;
-    background-color: #efefef;
-    opacity: .8;
+/* ===== 二级菜单样式 ===== */
+.submenu {
     position: absolute;
-    z-index: 300;
-    left: -2.5rem;
-    top: 3rem;
-    transition: height .3s;
-}
-
-
-/* 悬停时，展开类名包含'hoverflow'的div高度 */
-
-.mean div[class^=top]:hover div[class*=hoverflow] {
-    height: 10.5rem;
-    transition: height .5s;
-}
-
-
-/* 类名包含'hoverflow'的div内段落的样式 */
-
-.mean div[class^=top] div[class*=hoverflow] p {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     width: 8rem;
-    font-size: small;
-    border-top: rgba(100, 96, 96, .6) 1px solid;
-    padding-left: 1rem;
+    background-color: #efefef;
+    opacity: 0.9;
+    box-shadow: 2px 3px 5px rgba(108, 96, 96, 0.8), 3px -3px 4px black;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    /* 初始化为隐藏状态 */
+    overflow: hidden;
+    height: 0;
+    /* 过渡效果 */
+    transition: height 0.3s ease;
+    /* 避免被其他元素遮挡 */
+    z-index: 300;
 }
 
-
-/* 类名包含'hoverflow'的div内第一个段落的样式 */
-
-.mean div[class^=top] div[class*=hoverflow] p:first-child {
-    border-top: rgba(100, 96, 96, .8) 5px solid;
+/* ===== 二级菜单列表项样式 ===== */
+.submenu li {
+    border-top: 1px solid rgba(100, 96, 96, 0.6);
+    text-align: center;
+    /* padding-left: 1rem; */
+}
+/* 第一个上面的那个线 */
+.submenu li:first-child {
+    border-top: 5px solid rgba(100, 96, 96, 0.8);
 }
 
-
-/* 类名包含'hoverflow'的div内链接的样式 */
-
-.mean div[class^=top] div[class*=hoverflow] a {
+.submenu a {
+    display: block;
     line-height: 2rem;
-    padding-left: .5rem;
+    padding: 0.5rem;
+    font-size: small;
+    /* color: black; */
 }
 
-
-/* 轮播图 */
-
-@keyframes pic1 {
-    0% {
-        opacity: 1;
-    }
-    20% {
-        opacity: 1;
-    }
-    25% {
-        opacity: 0;
-    }
-    95% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+.submenu li:hover {
+    background-color: #ddd;
 }
 
-@keyframes pic2 {
-    0% {
-        opacity: 0;
-    }
-    20% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 1;
-    }
-    45% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
+/* 悬停时展开二级菜单 */
+.menu-item:hover .submenu {
+    height: auto;
+    transition: height 0.5s ease;
 }
 
-@keyframes pic3 {
-    0% {
-        opacity: 0;
-    }
-    45% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    70% {
-        opacity: 1;
-    }
-    75% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes pic4 {
-    0% {
-        opacity: 0;
-    }
-    70% {
-        opacity: 0;
-    }
-    75% {
-        opacity: 1;
-    }
-    95% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-
-/* 图片容器的样式 */
-
+/* ===== 轮播图样式 ===== */
 .img {
     width: 100%;
     height: 580px;
@@ -192,52 +101,51 @@ a {
     overflow: hidden;
 }
 
-
-/* 图片容器内图片的样式 */
-
+/* ===== 轮播图片样式 ===== */
 .img img {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     object-fit: cover;
-    /* 确保图片填满容器且不失真 */
     opacity: 0;
-    /* 透明度 */
-    animation: banner 5s ease-in-out infinite;
-    animation-play-state: running;
-    /* 默认播放 */
+    animation: banner 10s ease-in-out infinite;
 }
-
-
-/* 为每个图片设置不同的动画 */
 
 .img img:nth-child(1) {
     animation: pic1 10s infinite;
 }
-
 .img img:nth-child(2) {
     animation: pic2 10s infinite;
 }
-
 .img img:nth-child(3) {
     animation: pic3 10s infinite;
 }
-
 .img img:nth-child(4) {
     animation: pic4 10s infinite;
 }
-
-
-/* 鼠标悬停在容器时暂停所有图片的动画 */
 
 .img:hover img {
     animation-play-state: paused;
 }
 
-
-/* 鼠标移开时恢复动画 */
-
-.img:not(:hover) img {
-    animation-play-state: running;
+/* 动画关键帧 */
+@keyframes pic1 {
+    0%, 20% { opacity: 1; }
+    25%, 100% { opacity: 0; }
+}
+@keyframes pic2 {
+    0%, 25% { opacity: 0; }
+    30%, 50% { opacity: 1; }
+    55%, 100% { opacity: 0; }
+}
+@keyframes pic3 {
+    0%, 50% { opacity: 0; }
+    55%, 75% { opacity: 1; }
+    80%, 100% { opacity: 0; }
+}
+@keyframes pic4 {
+    0%, 75% { opacity: 0; }
+    80%, 95% { opacity: 1; }
+    100% { opacity: 0; }
 }
