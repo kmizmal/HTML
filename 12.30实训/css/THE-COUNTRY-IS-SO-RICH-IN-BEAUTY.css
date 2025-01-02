@@ -12,7 +12,6 @@ div>h2 {
     color: gray;
     margin-top: 0;
     font-size: 1.2rem;
-    /* 修正 'normal' 为具体字体大小 */
 }
 
 
@@ -41,10 +40,10 @@ div>h2 {
     /* 阴影效果 */
     transition: transform 0.3s ease-in-out;
     /* 平滑的过渡效果 */
-    width: calc(33.33% - 2rem);
-    /* 减去外边距的宽度 */
     margin: 1rem;
     /* 外边距 */
+    width: calc(33.33% - 2rem);
+    /* 减去外边距的宽度 */
     box-sizing: border-box;
     /* 包括 padding 和 border */
     text-align: center;
@@ -89,6 +88,9 @@ div>h2 {
     margin-bottom: 1rem;
     /* 图片与文字之间的间距 */
 }
+
+
+/* 移动端适配 */
 
 @media (max-width: 768px) {
     .THE-COUNTRY-IS-SO-RICH-IN-BEAUTY .img div {

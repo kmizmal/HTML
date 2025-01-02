@@ -1,15 +1,20 @@
 /* 主容器宽度设置 */
+
 .mount {
     width: 81.25rem;
     margin: 0 auto;
 }
 
+
 /* 清除浮动 */
+
 .mount div div {
     overflow: hidden;
 }
 
+
 /* 图片描述和标题样式 */
+
 .mount div div p,
 .mount div span {
     position: absolute;
@@ -22,7 +27,9 @@
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* 为每个浮动元素设置具体的描述 */
+
+/* 图片底部描述框 */
+
 .mount .big p {
     width: 100%;
 }
@@ -33,13 +40,17 @@
     transition: bottom 0.3s;
 }
 
+
 /* 悬停时的描述框动画 */
+
 .mount .float:hover p {
     bottom: -3rem;
     transition: bottom 0.4s;
 }
 
+
 /* 为浮动元素的标题设置样式 */
+
 .mount .float span {
     transition: all 1s;
     opacity: 0;
@@ -50,7 +61,9 @@
     border: solid 1px;
 }
 
+
 /* 悬停时标题的变化 */
+
 .mount .float:hover span {
     color: aqua;
     width: 9rem;
@@ -62,26 +75,34 @@
     transition: all 1s;
 }
 
+
 /* 悬停时图片的透明度变化 */
+
 .mount .float:hover img {
     opacity: 0.8;
     transition: opacity 0.8s;
 }
 
+
 /* 图片的基本样式 */
+
 .mount div img {
     max-height: 100%;
     transition: opacity 0.5s;
 }
 
-/* .big 类别（大图）的样式 */
+
+/* 左边大图的样式 */
+
 .mount .big {
     position: relative;
     height: 25.6rem;
     float: left;
 }
 
+
 /* 悬停时大图的缩放效果 */
+
 .mount .big img {
     transition: transform 0.3s;
 }
@@ -91,7 +112,9 @@
     transition: transform 0.5s;
 }
 
-/* .float 类别（小图）的样式 */
+
+/* 小图的样式 */
+
 .mount .float {
     float: left;
     height: 12.5rem;
@@ -100,29 +123,31 @@
     position: relative;
 }
 
+
 /* 为特定的 .float 设置上外边距 */
+
 .mount .float:nth-child(4),
 .mount .float:nth-child(5) {
     margin-top: 10px;
 }
 
 
+/* 移动端适配 */
+
 @media (max-width: 768px) {
     .mount {
         width: 100%;
         padding: 10px;
     }
-
-    .mount .big, .mount .float {
+    .mount .big,
+    .mount .float {
         float: none;
         width: 100%;
         margin-left: 0;
     }
-
     .mount .float p {
         width: 90%;
     }
-
     .mount .float:hover img {
         opacity: 1;
     }

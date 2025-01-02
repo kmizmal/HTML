@@ -1,8 +1,10 @@
 /* ===== 全局样式 ===== */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
+
 iframe {
     width: 100%;
     overflow: hidden;
@@ -10,27 +12,72 @@ iframe {
     height: 44rem;
     box-sizing: border-box;
 }
+
+
 /* 鼠标指针 */
+
 img:hover {
     cursor: url('../Arrow.ico'), auto;
 }
+
+
+/* 图片溢出处理 */
+
+img {
+    max-width: 100%;
+}
+
+
 /* 去除a标签默认样式 */
+
 a {
     text-decoration: none;
     color: black;
 }
+
+
 /* 主体部分居中 */
+
 .main {
     width: 80%;
     margin: 0 auto;
 }
+
+
 /* 标题文本居中 */
+
 h1,
 h2,
 h3 {
     text-align: center;
 }
+
+
+/* 装饰线 */
+
+div.quar {
+    margin: 0 auto;
+    height: 1px;
+    background-color: gray;
+    background-image: -webkit-linear-gradient(left, white 0%, gray 50%, white 100%);
+    width: 50%;
+    position: relative;
+}
+
+div.quar>span.quar {
+    position: absolute;
+    display: block;
+    transform: rotate(45deg) translate(-50%, -20%);
+    left: 50%;
+    top: 50%;
+    background-color: blue;
+    width: 1rem;
+    height: 1rem;
+}
+
+
 /* 清除浮动类 */
+
 .clear:after {
     content: '';
     display: block;

@@ -1,5 +1,5 @@
 .left {
-    /* 左侧容器，绝对定位，初始位置在左侧屏幕外 */
+    /* 左侧容器，绝对定位 */
     position: absolute;
     left: -25%;
     top: 0rem;
@@ -9,6 +9,12 @@
     /* 左侧容器内图片的大小 */
     height: 1rem;
     width: 1rem;
+}
+
+.left p span {
+    /* 左侧容器内文本的样式 */
+    font-weight: 100;
+    color: gray;
 }
 
 .fall {
@@ -26,13 +32,17 @@
     display: block;
     box-sizing: border-box;
     position: relative;
-    box-shadow: 5px 5px 5px gray; /* 阴影效果 */
-    break-inside: avoid; /* 防止列内断开 */
+    box-shadow: 5px 5px 5px gray;
+    /* 阴影效果 */
+    break-inside: avoid;
+    /* 防止列内断开 */
+    padding: .5rem;
+    margin: .3rem;
 }
 
 .fall .item p {
     /* 项目内段落的样式 */
-    margin-top: 0;
+    margin: 0;
 }
 
 .fall .item img {
@@ -52,10 +62,4 @@
 p {
     /* 段落文本居中 */
     text-align: center;
-}
-
-.left p span {
-    /* 左侧容器内文本的样式 */
-    font-weight: 100;
-    color: gray;
 }

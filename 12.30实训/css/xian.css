@@ -1,104 +1,154 @@
 #hitokoto_text {
-    color: #66afef; /* 设置文字颜色 */
+    color: #66afef;
+    /* 设置文字颜色 */
 }
 
 h2 {
-    text-align: left; /* 设置文字左对齐 */
+    text-align: left;
+    /* 设置文字左对齐 */
 }
 
 h3 span {
-    font-weight: 100; /* 设置文字细体 */
-    color: gray; /* 设置文字颜色为灰色 */
+    font-weight: 100;
+    /* 设置文字细体 */
+    color: gray;
+    /* 设置文字颜色为灰色 */
 }
 
 .xian {
-    margin: 0 30% 0 25%; /* 设置外边距 */
-    width: 45%; /* 设置宽度 */
-    position: relative; /* 设置相对定位 */
+    margin: 0 30% 0 25%;
+    /* 设置外边距 */
+    width: 45%;
+    /* 设置宽度 */
+    position: relative;
+    /* 设置相对定位 */
 }
 
 h4 {
-    text-align: center; /* 设置文字居中对齐 */
-    color: gray; /* 设置文字颜色为灰色 */
-    font-weight: 300; /* 设置文字细体 */
+    text-align: center;
+    /* 设置文字居中对齐 */
+    color: gray;
+    /* 设置文字颜色为灰色 */
+    font-weight: 300;
+    /* 设置文字细体 */
 }
 
 .fast {
-    background-color: rgb(239, 239, 239); /* 设置背景颜色 */
-    padding: 1.5rem; /* 设置内边距 */
+    background-color: rgb(239, 239, 239);
+    /* 设置背景颜色 */
+    padding: 1.5rem;
+    /* 设置内边距 */
 }
 
 p {
-    text-indent: 2rem; /* 设置首行缩进 */
+    text-indent: 2rem;
+    /* 设置首行缩进 */
 }
 
 p:has(img),
 .hitokoto {
-    text-align: center; /* 设置文字居中对齐 */
-    text-indent: 0rem; /* 取消首行缩进 */
+    text-align: center;
+    /* 设置文字居中对齐 */
+    text-indent: 0rem;
+    /* 取消首行缩进 */
 }
 
-p img {
-    max-width: 70%; /* 设置图片最大宽度 */
+.fast p {
+    text-indent: 0rem;
+    /* 取消首行缩进 */
+}
+
+p:has(img) a {
+    display: inline-block;
+    transform: translateY(-50%)
 }
 
 .left {
-    width: 45%; /* 设置宽度 */
-    position: absolute; /* 设置绝对定位 */
-    left: -50%; /* 设置左边距 */
-    top: 0rem; /* 设置上边距 */
+    width: 45%;
+    /* 设置宽度 */
+    position: absolute;
+    /* 设置绝对定位 */
+    left: -50%;
+    /* 设置左边距 */
+    top: 0rem;
+    /* 设置上边距 */
 }
 
 .right {
-    width: 50%; /* 设置宽度 */
-    position: absolute; /* 设置绝对定位 */
-    overflow-y: auto; /* 设置垂直方向自动溢出 */
-    right: -55%; /* 设置右边距 */
-    top: 0%; /* 设置上边距 */
-    background-color: rgb(237, 240, 243); /* 设置背景颜色 */
+    width: 50%;
+    /* 设置宽度 */
+    position: absolute;
+    /* 设置绝对定位 */
+    overflow-y: auto;
+    /* 设置垂直方向自动溢出 */
+    right: -55%;
+    /* 设置右边距 */
+    top: 0%;
+    /* 设置上边距 */
+    background-color: rgb(237, 240, 243);
+    /* 设置背景颜色 */
 }
 
 .right img {
-    max-width: 85%; /* 设置图片最大宽度 */
+    max-width: 85%;
+    /* 设置图片最大宽度 */
 }
 
 hr {
-    border-top: dashed 1px rgb(201, 201, 201); /* 设置虚线边框 */
+    border-top: dashed 1px rgb(201, 201, 201);
+    /* 设置虚线边框 */
 }
 
 td {
-    padding: .5rem; /* 设置内边距 */
-    border: #dad4d4 1px solid; /* 设置边框 */
-    width: 5rem; /* 设置宽度 */
-    height: 1rem; /* 设置高度 */
-    line-height: 1rem; /* 设置行高 */
-    text-align: center; /* 设置文字居中对齐 */
-    font-size: smaller; /* 设置文字大小 */
+    padding: .5rem;
+    /* 设置内边距 */
+    border: #dad4d4 1px solid;
+    /* 设置边框 */
+    width: 5rem;
+    /* 设置宽度 */
+    height: 1rem;
+    /* 设置高度 */
+    line-height: 1rem;
+    /* 设置行高 */
+    text-align: center;
+    /* 设置文字居中对齐 */
+    font-size: smaller;
+    /* 设置文字大小 */
 }
 
 table {
-    border-spacing: .5rem; /* 设置单元格间距 */
+    border-spacing: .5rem;
+    /* 设置单元格间距 */
     /* position: relative;
     right: -50%; */
-    margin: 0 auto; /* 设置外边距自动 */
+    margin: 0 auto;
+    /* 设置外边距自动 */
 }
 
 .right .doubleImg {
-    height: 7rem; /* 设置高度 */
-    margin: 0 auto; /* 设置外边距自动 */
-    width: 90%; /* 设置宽度 */
+    height: 7rem;
+    /* 设置高度 */
+    margin: 0 auto;
+    /* 设置外边距自动 */
+    width: 90%;
+    /* 设置宽度 */
 }
 
 .right .doubleImg img {
-    float: left; /* 设置左浮动 */
-    width: 46%; /* 设置宽度 */
-    margin: 2%; /* 设置外边距 */
+    float: left;
+    /* 设置左浮动 */
+    width: 46%;
+    /* 设置宽度 */
+    margin: 2%;
+    /* 设置外边距 */
 }
 
 .right ul {
-    list-style-type: circle; /* 设置列表样式类型为圆圈 */
+    list-style-type: circle;
+    /* 设置列表样式类型为圆圈 */
 }
 
 .right li {
-    margin: .6rem; /* 设置外边距 */
+    margin: .6rem;
+    /* 设置外边距 */
 }
