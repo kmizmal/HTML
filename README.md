@@ -23,3 +23,5 @@ I usually prefer to use the date for naming
 ## [12.19](https://kmizmal.github.io/HTML/12.19/index.html)
 
 ## [12.26](https://kmizmal.github.io/HTML/12.26/index.html)
+
+## [clock](https://kmizmal.github.io/HTML/clock/index.html)
