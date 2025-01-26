@@ -15,6 +15,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            display: none;
         }
 
         #date {
@@ -29,13 +30,14 @@
 
         #svg-container {
             height: 80px;
-            width: 400px;
+            width: 80%;
             margin: 10px auto;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             gap: 20px;
+            /* background-color: aqua; */
         }
 
         #svg-container>div {
@@ -56,7 +58,6 @@
 
         * {
             background-color: rgba(168, 148, 172, 0);
-            /* transform: scale(1.5); */
         }
     </style>
 </head>
@@ -226,7 +227,7 @@
             }).join('');
 
             let parts = digits.map((char, idx) => {
-                const width = 30;  // 减小数字图像的宽度
+                const width = 20;  // 减小数字图像的宽度
                 const height = 40;
                 x = idx * (width + 5);  // 控制每个数字之间的间距
 
