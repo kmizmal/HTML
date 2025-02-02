@@ -25,3 +25,4 @@ I usually prefer to use the date for naming
 ## [12.26](https://kmizmal.github.io/HTML/12.26/index.html)
 
 ## [clock](https://kmizmal.github.io/HTML/clock/index.html)
+> 感谢 https://github.com/journey-ad/Moe-Counter 的图片素材

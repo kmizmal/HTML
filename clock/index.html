@@ -15,12 +15,15 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            /* display: none; */
         }
 
-        /* button{
-            display: none;
-        } */
+        #theme-selector {
+            padding: 5px;
+            background-color: lightgray;
+            border: none;
+            cursor: pointer;
+        }
+
         #date {
             font-size: 1.2em;
             margin-bottom: 10px;
@@ -39,38 +42,18 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            gap: 20px;
         }
 
         #svg-container>div {
             display: flex;
             text-align: center;
-            columns: 2;
-            gap: 5px;
-        }
-
-
-        #theme-selector {
-            margin-top: 20px;
-            padding: 5px;
-            background-color: lightgray;
-            border: none;
-            cursor: pointer;
-        }
-
-        * {
-            background-color: rgba(168, 148, 172, 0);
         }
     </style>
 </head>
 
 <body>
     <script>
-        let svgCache = {
-            hour: '',
-            minute: '',
-            second: ''
-        };
+        let svgCache = {hour: '',minute: '',second: ''};
 
         const currentTheme = 'moebooru'; // 当前主题
         const digitsImages = {
@@ -86,7 +69,8 @@
             '9': '9.gif'
         };
         const themeList = {
-            'moebooru': './img/moebooru/',
+            '3d-num': './img/3d-num/',
+            'asoul': './img/asoul/',
             'booru-ffsr': './img/booru-ffsr/',
             'booru-helltaker': './img/booru-helltaker/',
             'booru-huggboo': './img/booru-huggboo/',
@@ -110,65 +94,52 @@
             'booru-vivi': './img/booru-vivi/',
             'booru-vp': './img/booru-vp/',
             'booru-yuyuyui': './img/booru-yuyuyui/',
-            'capoo': './img/capoo/',
             'e621': './img/e621/',
             'food': './img/food/',
             'gelbooru': './img/gelbooru/',
-            'gelbooru-h': './img/gelbooru-h/',
             'green': './img/green/',
-            'kasuterura': './img/kasuterura/',
+            'kasuterura-1': './img/kasuterura-1/',
+            'kasuterura-2': './img/kasuterura-2/',
+            'kasuterura-3': './img/kasuterura-3/',
+            'kasuterura-4': './img/kasuterura-4/',
             'kyun': './img/kyun/',
-            'love-and-deepspace': './img/love-and-deepspace/',
             'minecraft': './img/minecraft/',
-            'moebooru-h': './img/moebooru-h/',
-            'morden': './img/morden-num/',
-            'nixietube': './img/nixietube/',
-            'normal': './img/normal/',
+            'moebooru': './img/moebooru/',
+            'morden-num': './img/morden-num/',
+            'nixietube-1': './img/nixietube-1/',
+            'nixietube-2': './img/nixietube-2/',
+            'normal-1': './img/normal-1/',
+            'normal-2': './img/normal-2/',
             'original-new': './img/original-new/',
             'original-old': './img/original-old/',
             'rule34': './img/rule34/',
-            'shimmie2': './img/shimmie2/',
-            'sketch': './img/sketch-1/'
+            'shimmie2': './img/shimmie2/'
         };
 
         let themeKeys = Object.keys(themeList);
         let currentThemeIndex = themeKeys.indexOf(currentTheme);
 
         function changeTheme() {
-            // 清除缓存
-            svgCache = {
-                hour: '',
-                minute: '',
-                second: ''
-            };
+            svgCache = {hour: '',minute: '',second: ''};
 
-            currentThemeIndex = (currentThemeIndex + 1) % themeKeys.length; // 按顺序切换主题，循环
-            const newTheme = themeKeys[currentThemeIndex]; // 获取下一个主题
+            currentThemeIndex = (currentThemeIndex + 1) % themeKeys.length;
+            const newTheme = themeKeys[currentThemeIndex];
             updateTime(newTheme);
         }
 
         function updateTime(theme = themeKeys[currentThemeIndex]) {
             const now = new Date();
-            const formattedTime = now.toLocaleString('zh-CN', {
-                timeZone: 'Asia/Shanghai',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit',
-            });
+            const formattedTime = now.toLocaleString('zh-CN', {timeZone: 'Asia/Shanghai',year: 'numeric',month: 'long',day: 'numeric',hour: '2-digit',minute: '2-digit',second: '2-digit'});
             const [date, time] = formattedTime.split(' ');
             const [hour, minute, second] = time.split(':');
 
-            // 更新日期和时间显示
-            document.getElementById('date').textContent = date;
-            document.getElementById('time').textContent = time;
-
-            // 更新小时、分钟和秒数的 SVG
+            const dateElement = document.getElementById('date');
+            const timeElement = document.getElementById('time');
             const svgContainer = document.getElementById('svg-container');
 
-            // 只更新变化的部分
+            dateElement.textContent = date;
+            timeElement.textContent = time;
+
             updateSVGPart(svgContainer, 'hour', hour, theme);
             updateSVGPart(svgContainer, 'minute', minute, theme);
             updateSVGPart(svgContainer, 'second', second, theme);
@@ -177,32 +148,24 @@
         function updateSVGPart(container, type, count, theme) {
             let svgElement = container.querySelector(`#${type}`);
 
-            // 如果缓存中有SVG则使用缓存，避免重复生成
             if (svgCache[type] && svgCache[type][count]) {
-                if (svgElement) {
-                    svgElement.innerHTML = svgCache[type][count]; // 更新已存在的部分
-                } else {
-                    // 如果没有找到SVG元素，添加新的SVG部分
+                if (svgElement) {svgElement.innerHTML = svgCache[type][count];} 
+                else {
                     const newSVG = svgCache[type][count];
                     const newElement = document.createElement('div');
-                    newElement.id = type; // 给每个部分添加唯一的ID
+                    newElement.id = type;
                     newElement.innerHTML = newSVG;
                     container.appendChild(newElement);
                 }
             } else {
                 const newSVG = generateSVG(count, type, theme);
-                // 缓存生成的SVG
-                if (!svgCache[type]) {
-                    svgCache[type] = {};
-                }
+                if (!svgCache[type]) {svgCache[type] = {};}
                 svgCache[type][count] = newSVG;
 
-                if (svgElement) {
-                    svgElement.innerHTML = newSVG; // 更新已存在的部分
-                } else {
-                    // 如果没有找到SVG元素，添加新的SVG部分
+                if (svgElement) {svgElement.innerHTML = newSVG;}
+                else {
                     const newElement = document.createElement('div');
-                    newElement.id = type; // 给每个部分添加唯一的ID
+                    newElement.id = type;
                     newElement.innerHTML = newSVG;
                     container.appendChild(newElement);
                 }
@@ -210,9 +173,7 @@
         }
 
         function generateSVG(count, type, theme) {
-            if (svgCache[type] && svgCache[type][count]) {
-                return svgCache[type][count];  // 返回缓存的SVG
-            }
+            if (svgCache[type] && svgCache[type][count]) {return svgCache[type][count];}
 
             const themePath = themeList[theme];
             const digits = count.toString().split('');
@@ -221,7 +182,7 @@
 
             let defs = digits.map(char => {
                 const imagePath = themePath + digitsImages[char] || themeList.default + digitsImages[char];
-                const width = 30;  // 减小每个数字图像的宽度
+                const width = 30;
                 const height = 40;
                 y = Math.max(y, height);
 
@@ -229,38 +190,40 @@
             }).join('');
 
             let parts = digits.map((char, idx) => {
-                const width = 20;  // 减小数字图像的宽度
+                const width = 15;
                 const height = 40;
-                x = idx * (width + 5);  // 控制每个数字之间的间距
+                x = idx * (width + 5);
 
                 return `<use x="${x}" y="0" xlink:href="#${char}" />`;
             }).join('');
 
             const svg = ` 
-        <svg xmlns="http://www.w3.org/2000/svg" width="${x + 50}" height="${y}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="${x + 33}" height="${y}">
             <defs>${defs}</defs>
             <g>${parts}</g>
         </svg>
     `;
 
-            if (!svgCache[type]) {
-                svgCache[type] = {};
-            }
+            if (!svgCache[type]) {svgCache[type] = {};}
             svgCache[type][count] = svg;
 
             return svg;
         }
 
         document.addEventListener('DOMContentLoaded', function () {
+            const dateElement = document.getElementById('date');
+            const timeElement = document.getElementById('time');
+            const svgContainer = document.getElementById('svg-container');
+            const themeSelector = document.getElementById('theme-selector');
+
             setInterval(updateTime, 1000);
-            document.getElementById('theme-selector').addEventListener('click', changeTheme);
+            themeSelector.addEventListener('click', changeTheme);
         });
     </script>
 
     <div class="main">
         <div id="date"></div>
         <div id="time"></div>
-
     </div>
     <div id="svg-container"></div>
     <button id="theme-selector">切换主题</button>
