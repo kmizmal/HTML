@@ -1,71 +1,41 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>预览页</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="./js/html2canvas.js"></script>
 </head>
-<body>
-    
-<h1 align="center">
-    <main>莫名其妙包进main里面的一个居中标题</main>
-</h1>
-<div bgcolor="yellow">第一个，可能是黄色</div>
-<p>事实上，div标签<b>不允许bgcolor参数</b></p>
-<br>
-
-<div>第二个div</div>
-<hr><p>分割线</p>
-<em>em是斜体</em>
-<p><b>加大？</p></b><p>b也是加粗</p>
-<p>sub<sub>是上标?</sub>sub是下标</p>
-
-
-<div>
-<p>那<sup>sup就是上标</sup></p>
-<p>看那个
-    <mark>圈的位置</mark>，而不是杠</p>
-    <p>回车有一个空格的位置？！</p>
-
-        <pre>
-        pre标签允许全输出
-        能很好的输出字符画了
-                  *
-                *****
-              *********
-                
-                
-                有点<b>奇怪</b>，
-        这不是一种高效的方法
-                            而且感觉很容易被拉伸
-                
-                
-                </pre>
-                <p>b标签能在里面套，但不能套在外面</p><p>空格间距有点奇怪</p>
-</div>
-<p>上面明明额外套了一个div貌似在简单垂直布局下无影响</p>
-<a href="zmal.pages.dev">这能跳转我在cf的博客</a>
-<p>a里面的href默认相对路径，得带
-    <a href="http://zmal.pages.dev">http,https</a>，第二次上当</p>
-    <p>但直接上是本标签页跳转，如何新建标签页？<del>反正不是我的浏览器</del></p>
-    <a href="https://zmal.pages.dev" target="_blank">新建标签页</a>
-
-<div>
-    <iframe src="https://ip.skk.moe/simple" style="width: 100%; border: 0"></iframe>
-    <p>好好好，反正我本地网络ping不通</p>
-</div>
 <style>
-    #hitokoto_text{
-        color: #67ccd7;
-        text-decoration: none;
-        text-align: center;
-    
-    }  
-    #hitokoto{
-        text-align: center; 
+#hitokoto_text {
+      color: #67ccd7;
+      text-decoration: none;
+
+    }
+
+    #hitokoto {
+      text-align: center;
+    }
+
+    .prelview {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .prelview div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 </style>
-<p id="hitokoto">
+<body>
+
+  <p id="hitokoto">
     <a href="#" id="hitokoto_text">:D 一言获取中...</a>
   </p>
   <script>
@@ -77,10 +47,63 @@
         hitokoto.innerText = data.hitokoto
       })
       .catch(console.error)
-  </script>
-  <p>我不管，反正一言文档就是这样写的，我直接抄没什么问题吧</p>
-  <p>啊，为什么我套出来就这么丑</p>
+</script>
+<div class="prelview">
+  <div id="11-02">
+    <script>
+      window.onload = function () {
+        captureScreenshotFromURL(
+          "./11.02/index.html",
+          "11-02",
+          (canvas, error) => {
+            if (error) {
+              console.error("截图失败:", error);
+              return;
+            }
+            console.log("截图成功！");
+          },
+          {
+            width: 800,
+            height: 600,
+            timeout: 15000,
+            html2canvasOptions: {
+              backgroundColor: "#ffffff"
+            }
+          }
+        );
+      };
+    </script>
+    
+  </div>
+  <!-- <iframe src="./11.02/index.html" frameborder="0"></iframe> -->
+  <div class="11-07">
+   
+  </div>
+  <div class="11-14">
+    
+  </div>
+  <div class="11-21">
 
+  </div>
+  <div class="11-28">
+
+  </div>
+  <div class="12-05">
+
+  </div>
+  <div class="12-12">
+
+  </div>
+  <div class="12-19">
+  </div>
+  <div class="12-26">
+  </div>
+  <div class="12-30">
+  </div>
+  <div class="clock">
+  </div>
+
+</div>
 </body>
-</html>
 
+</html>
