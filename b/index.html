@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一方净土</title>
+    <style>
+        .top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+            padding: 10px;
+            position: relative;
+        }
+
+        a {
+            text-decoration: none;
+            color: #7390c1da;
+        }
+
+        .welcome,
+        .qq {
+            padding: 1rem;
+            font-size: 20px;
+            box-shadow:
+                0 8px 32px rgba(0, 0, 0, 0.2),
+                inset 0 0 8px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 10px;
+        }
+
+        .welcome {
+            position: absolute;
+            left: 2rem;
+        }
+
+        .qq {
+            position: absolute;
+            right: 2rem;
+        }
+
+        .main,
+        .chat {
+            width: 75%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .main>div {
+            width: 30%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .main div img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 5%;
+        }
+
+        .chat img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .main>div {
+                width: 100%;
+            }
+
+            .qq {
+                right: 1rem;
+                font-size: 18px;
+            }
+            .welcome {
+                top: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <div class="welcome" id="welcome">欢迎</div>
+        <div class="qq"><a href="https://qm.qq.com/q/9IpmixojNm">QQ群:1029050618</a></div>
+        <h1>一方净土</h1>
+        <h2>介绍</h2>
+    </div>
+    <div class="main">
+
+        <div class="zmal">
+            <a href="https://space.bilibili.com/554419861" target="_blank">
+                <img src="https://img.zmal.top/image.5tr66d09qg.jpg" alt=""></a>
+            <div class="info">梦断忆-</div>
+        </div>
+        <div class="gin">
+            <a href="https://space.bilibili.com/1221821519" target="_blank">
+                <img src="https://img.zmal.top/96f312826ac8779d37fce7538a45aaddca756c35.70ahey9wx7.jpg" alt=""></a>
+            <div class="info">無想の永遠</div>
+        </div>
+        <div class="vva">
+            <a href="https://space.bilibili.com/419070299" target="_blank">
+                <img src="https://img.zmal.top/cf04f159a8f152eeb817c5d6e8c896d2744680fa.2obo7er50m.jpg" alt=""></a>
+            <div class="info">微微安_official</div>
+        </div>
+    </div>
+    <div class="chat">
+        <a href="https://chat.getloli.com/room/@zmalblibili">
+            <img src="https://chat.getloli.com/room/@zmalblibili/svg?width=750&height=360&limit=20&theme=light&fontSize=13"
+                alt="">
+        </a>
+    </div>
+    <script>
+        function getReferrerSource() {
+            const ref = document.referrer;
+            if (!ref) return "欢迎直接访问的朋友";
+            if (ref.includes("baidu.com")) return "欢迎从百度来的朋友";
+            if (ref.includes("google.com")) return "欢迎从Google来的朋友";
+            if (ref.includes("weibo.com")) return "欢迎从微博来的朋友";
+            if (ref.includes("zhihu.com")) return "欢迎从知乎来的朋友";
+            if (ref.includes("biliibili.com")) return "欢迎从B站来的朋友";
+            if (ref.includes("qq.com")) return "欢迎从QQ来的朋友";
+            return "欢迎~";
+        }
+        const welcome = document.getElementById("welcome")
+        welcome.innerText = getReferrerSource()
+    </script>
+    <script>
+        setTimeout(function() {
+            document.getElementById('welcome').style.display = 'none';
+            document.querySelector('.qq').style.display = 'none';
+        }, 10000);  // 10000 毫秒即 10 秒
+    </script>
+    
+</body>
+
+</html>
