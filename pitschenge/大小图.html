@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #box {
+            width: 400px;
+            height: 400px;
+            margin: 40px;
+            margin-bottom: 10px;
+        }
+
+        #box img {
+            width: 400px;
+            height: 400px;
+        }
+
+        ul li {
+            width: 80px;
+            height: 80px;
+            border: 1px solid gray;
+            margin-left: 10px;
+            float: left;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <div id="bigImg">
+            <img src="img/1.jpg" id="im">
+        </div>
+        <ul id="smallImg">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <script>
+        const pits = document.getElementById('smallImg').getElementsByTagName('li');
+        const bigImg = document.getElementById('bigImg').getElementsByTagName('img')[0];
+
+        for (let i = 0; i < pits.length; i++) {
+            pits[i].style.backgroundImage = `url(./img/${i + 1}.jpg)`;
+
+            pits[i].onclick = function () {
+                bigImg.src = `img/${i + 1}.jpg`;
+            };
+        }
+    </script>
+</body>
+
+</html>
